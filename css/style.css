@@ -110,3 +110,6 @@ td, th {
     max-width: 950px;
     margin: auto;
 }
+.custom_input_field {
+    width: 100%;
+}
