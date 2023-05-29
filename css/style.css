@@ -20,16 +20,16 @@
 .intro h2, p {
     color: #c62828;
 }
-.contact_name input {
-    width: 80%;
-    margin-bottom: 10px;
+.user_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 15px;
+    text-align: left;
 }
-.contact_name2 input {
-    width: 70%;
+.user_info input {
     margin-bottom: 10px;
-}
-.date_input input {
-    width: 72%;
+    width: 100%;
 }
 .content {
     margin: auto;
@@ -117,4 +117,28 @@ td, th {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
+}
+footer {
+    max-width: 950px;
+    margin: 0 auto;
+}
+.footer_content {
+    padding-top: 30px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+.footer_content textarea {
+    width: 100%;
+    resize: none;
+}
+.footer_content input {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.no_margin_bottom {
+    margin-bottom: 0 !important;
 }
