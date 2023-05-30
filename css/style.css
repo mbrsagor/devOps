@@ -126,3 +126,11 @@ footer {
 .no_margin_bottom {
     margin-bottom: 0 !important;
 }
+.bottom_text p {
+    color: #000000;
+    font-size: 14px;
+}
+.products_text, .web_address {
+    font-size: 13px;
+    margin-right: 15px;
+}
