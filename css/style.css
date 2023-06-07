@@ -2,10 +2,11 @@
     padding: 0;
     margin: 0;
 }
-
-.header_content {
+.header {
     max-width: 950px;
     margin: 5px auto;
+}
+.header_content {
     display: flex;
     justify-content: space-between;
     padding: 15px 10px;
@@ -21,11 +22,21 @@
     background: #d9d9d9;
     border-radius: 50%;
 }
+.user_info {
+    max-width: 950px;
+    margin: 5px auto;
+    padding: 10px 0;
+}
+.customer_form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 .user_info input {
     margin-bottom: 10px;
     width: 100%;
 }
-.intro h2 {
+.intro h2, .user_info h2 {
     margin-bottom: 0;
     font-size: 1.5em;
 }
