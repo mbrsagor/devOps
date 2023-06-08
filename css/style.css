@@ -6,6 +6,23 @@
     max-width: 950px;
     margin: 5px auto;
 }
+.main_menu {
+    max-width: 950px;
+    margin: auto;
+    padding: 10px;
+}
+.main_menu ul li a {
+    list-style: none;
+    color: #666666;
+}
+.main_menu ul li a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+.main_menu ul li {
+    display: inline-block;
+    padding: 0 6px;
+}
 .header_content {
     display: flex;
     justify-content: space-between;
@@ -35,6 +52,7 @@
 .user_info input {
     margin-bottom: 10px;
     width: 100%;
+    padding: 5px;
 }
 .intro h2, .user_info h2 {
     margin-bottom: 0;
