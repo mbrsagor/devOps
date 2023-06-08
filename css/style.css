@@ -10,6 +10,7 @@
     max-width: 950px;
     margin: auto;
     padding: 10px;
+    border-bottom: 1px solid #000000;
 }
 .main_menu ul li a {
     list-style: none;
@@ -174,4 +175,24 @@ footer {
 .form_contorl_select {
     width: 100%;
     padding: 2px;
+}
+
+
+/* GALLERY STYLING */
+.gallery_content {
+    max-width: 950px;
+    margin: 10px auto;
+}
+.cwa-lightbox-image img {
+    width: 100%;
+}
+.signle_item {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+.image-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
 }
