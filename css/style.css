@@ -278,3 +278,21 @@ footer {
     font-size: 12px;
     font-weight: 300;
 }
+.residential_table_bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.residential_left_text {
+    flex-basis: 49%;
+}
+.residential_right_text {
+    flex-basis: 49%;
+}
+.residential_right_text h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.residential_right_text ul {
+    margin-left: 15px;
+}
