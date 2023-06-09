@@ -246,3 +246,35 @@ footer {
 .signature input {
     width: 81%;
 }
+.section_title {
+    text-transform: uppercase;
+    background-color: #1c3966;
+    max-width: 240px;
+    color: #fff;
+    padding: 9px 5px;
+    text-align: center;
+    font-weight: 300;
+}
+.one_third {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.single_thumb img {
+    width: 100%;
+}
+.gate_table table {
+    border-color: #000000 !important;
+}
+.gate_table thead {
+    background-color: #1c3966;
+    color: #fff;
+}
+.gate_table thead span {
+    font-size: 14px;
+    font-weight: 300;
+}
+.gate_table tbody span {
+    font-size: 12px;
+    font-weight: 300;
+}
