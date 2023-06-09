@@ -196,3 +196,50 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
 }
+.content_quick_ship {
+    max-width: 950px;
+    margin: 10px auto;
+}
+.quick_ship_header {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 3fr;
+}
+.quick_ship_logo img {
+    width: 100%;
+}
+.sidemenu {
+    margin-top: 20px;
+}
+.sidemenu ul li {
+    display: inline-block;
+    padding: 0 8px;
+}
+.top_contact_sidebar h3 {
+    margin-bottom: 0;
+    font-size: 1.5em;
+}
+.top_contact_sidebar h3 span{
+    font-size: 17px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+.quick_ship_form {
+    margin-top: 15px;
+}
+.quick_input input {
+    width: 68%;
+    margin-left: 5px;
+}
+.mandatory input {
+    width: 56%;
+}
+.contact_name input {
+    width: 60%;
+}
+.contact_num input {
+    width: 58%;
+}
+.signature input {
+    width: 65%;
+}
