@@ -296,3 +296,11 @@ footer {
 .residential_right_text ul {
     margin-left: 15px;
 }
+.fillupform_th th {
+    font-weight: 400;
+}
+.one_half {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
