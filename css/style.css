@@ -294,3 +294,22 @@ footer {
     max-width: 950px;
     margin: auto;
 }
+.common_content {
+    max-width: 950px;
+    margin: auto;
+}
+.common_row {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.grid_content {
+    border: 1px solid #1c3966;
+}
+.grid_one {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
