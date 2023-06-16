@@ -232,31 +232,14 @@ footer {
 }
 .quick_ship_form {
     margin-top: 15px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
 }
 .quick_input input {
-    width: 85%;
-    margin-left: 5px;
-}
-.mandatory input {
-    width: 70%;
-}
-.contact_name input {
-    width: 75%;
-}
-.contact_num input {
-    width: 72%;
-}
-.signature input {
-    width: 81%;
-}
-.section_title {
-    text-transform: uppercase;
-    background-color: #1c3966;
-    max-width: 240px;
-    color: #fff;
-    padding: 9px 5px;
-    text-align: center;
-    font-weight: 300;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 8px;
 }
 .one_third {
     display: grid;
@@ -306,4 +289,8 @@ footer {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
+}
+.quick_ship_content {
+    max-width: 950px;
+    margin: auto;
 }
