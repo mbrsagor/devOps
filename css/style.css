@@ -273,6 +273,9 @@ footer {
 .gate_table table {
     border-color: #000000 !important;
 }
+.gate_table .table-bordered thead td, .table-bordered thead th {
+    font-weight: 500 !important;
+}
 .gate_table thead {
     background-color: #1c3966;
     color: #fff;
