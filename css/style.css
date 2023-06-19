@@ -43,11 +43,18 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 15px 10px;
-    background: #eeecec;
+    background: aliceblue;
     border-radius: 8px;
+}
+.intro {
+    padding-left: 8px;
+    padding-top: 15px;
 }
 .intro p {
     margin: 0;
+}
+.intro h2 {
+    color: #769962 !important;
 }
 .logo {
     width: 200px;
@@ -119,7 +126,7 @@ body {
     width: 70%;
 }
 .reference {
-    border-bottom: 2px solid #000000;
+    /* border-bottom: 2px solid #000000; */
     padding: 3px 0;
     max-width: 950px;
     margin: auto;
@@ -135,9 +142,6 @@ body {
 }
 .finials {
     padding-right: 10px;
-}
-.fence_section {
-    margin-top: 10px;
 }
 .fence_content {
     margin: auto;
@@ -352,4 +356,7 @@ footer {
 }
 .single_hardware {
     border: 1px solid #1c3966;
+}
+.table-bordered td, .table-bordered th {
+    font-weight: 500 !important;
 }
