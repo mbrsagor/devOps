@@ -10,16 +10,15 @@ body {
 }
 .header {
     max-width: 950px;
-    margin: 5px auto;
+    margin: 0 auto;
 }
 .main_menu {
     max-width: 950px;
     margin: auto;
-    padding: 10px;
-    border-bottom: 1px solid #000000;
 }
 .main_menu ul {
     background: #769962;
+    margin-bottom: 0 !important;
 }
 .main_menu ul li a {
     list-style: none;
