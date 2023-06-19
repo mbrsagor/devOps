@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100&family=Sen:wght@400;800&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sen', sans-serif;
+}
 * {
     padding: 0;
     margin: 0;
@@ -35,13 +41,12 @@
     margin: 0;
 }
 .logo {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: auto;
     border-radius: 50%;
 }
 .logo img {
     width: 100%;
-    margin-top: 13px;
 }
 .user_info {
     max-width: 950px;
@@ -61,6 +66,13 @@
 .intro h2, .user_info h2 {
     margin-bottom: 0;
     font-size: 1.5em;
+    font-weight: 600;
+    color: #665656;
+}
+.common_headline {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #665656;
 }
 .content {
     margin: auto;
