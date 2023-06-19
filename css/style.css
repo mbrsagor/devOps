@@ -131,6 +131,7 @@ body {
     font-size: 1.3em;
     font-weight: 600;
     color: #665656;
+    margin-bottom: 5px;
 }
 .finials {
     padding-right: 10px;
@@ -345,7 +346,7 @@ footer {
 .one_six {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .single_hardware {
     border: 1px solid #1c3966;
