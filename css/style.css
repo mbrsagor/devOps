@@ -87,7 +87,7 @@ body {
     margin: auto;
     max-width: 950px;
     /* border-top: 2px solid #000000; */
-    border-bottom: 2px solid #000000;
+    /* border-bottom: 2px solid #000000; */
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-gap: 10px;
@@ -164,6 +164,8 @@ body {
 footer {
     max-width: 950px;
     margin: 0 auto;
+    background: aliceblue;
+    padding: 5px;
 }
 .footer_content {
     padding-top: 30px;
@@ -190,8 +192,8 @@ footer {
     font-size: 14px;
 }
 .products_text, .web_address {
-    font-size: 13px;
-    margin-right: 15px;
+    font-size: 16px;
+    margin-right: 5px;
 }
 .finials_img img {
     width: 50px;
@@ -343,7 +345,7 @@ footer {
     grid-gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.one_six {
+.one_seven {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
