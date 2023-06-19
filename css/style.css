@@ -357,6 +357,11 @@ footer {
 .single_hardware {
     border: 1px solid #1c3966;
 }
+.single_hardware p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 50px;
+}
 .table-bordered td, .table-bordered th {
     font-weight: 500 !important;
 }
