@@ -409,6 +409,7 @@
                 <div class="grade">
                     <div class="gate_table">
                         <div class="fence_sec_table">
+                            <h3 class="text-center text-uppercase common_headline pt-3 mb-3">Post & Pool Guidelines Reference Guide</h3>
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -440,104 +441,141 @@
                             </table>
                         </div>
                     </div>
-                    <div class="gate_table">
-                        <table style="margin-bottom: 4px;" class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>POST Type</th>
-                                    <th>SIZE</th>
-                                    <th>WALL</th>
-                                    <th>LENGTH</th>
-                                    <th>QTY</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Corner Post</td>
-                                    <td>2"-Standard</td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">Light .062 Standard</option>
-                                            <option value="2">.093 Medium </option>
-                                            <option value="3">recommended for 6-ft height</option>
-                                            <option value="4">.125 Heavy and used for gates</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">4-foot fence</option>
-                                            <option value="2"> 72" post</option>
-                                        </select>
-                                    </td>
-                                    <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
-                                </tr>
-                                <tr>
-                                    <td>Gate Post</td>
-                                    <td>2.5" Beefier look</td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">Light .062 Standard</option>
-                                            <option value="2">.093 Medium </option>
-                                            <option value="3">recommended for 6-ft height</option>
-                                            <option value="4">.125 Heavy and used for gates</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">4-foot fence</option>
-                                            <option value="2"> 72" post</option>
-                                        </select>
-                                    </td>
-                                    <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
-                                </tr>
-                                <tr>
-                                    <td>Line Post</td>
-                                    <td>Industrial 3</td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">Light .062 Standard</option>
-                                            <option value="2">.093 Medium </option>
-                                            <option value="3">recommended for 6-ft height</option>
-                                            <option value="4">.125 Heavy and used for gates</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">4-foot fence</option>
-                                            <option value="2"> 72" post</option>
-                                        </select>
-                                    </td>
-                                    <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
-                                </tr>
-                                <tr>
-                                    <td>End Post</td>
-                                    <td>Upgraded look</td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">Light .062 Standard</option>
-                                            <option value="2">.093 Medium </option>
-                                            <option value="3">recommended for 6-ft height</option>
-                                            <option value="4">.125 Heavy and used for gates</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <select name="corner" id="corner">
-                                            <option value="">-----</option>
-                                            <option value="1">4-foot fence</option>
-                                            <option value="2"> 72" post</option>
-                                        </select>
-                                    </td>
-                                    <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; grid-gap: 10px;">
+                            <div class="gate_table">
+                                <table style="margin-bottom: 4px;" class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 40%;">POST Type</th>
+                                            <th>SIZE</th>
+                                            <th>WALL</th>
+                                            <th>LENGTH</th>
+                                            <th>QTY</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Corner Post</td>
+                                            <td>
+                                                <select name="post_size" id="post_size">
+                                                    <option value="">-----</option>
+                                                    <option value="1">2"-Standard</option>
+                                                    <option value="2">2.5" Beefier look</option>
+                                                    <option value="3">Industrial 3</option>
+                                                    <option value="4">Upgraded look</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 100%;" name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">Light .062 Standard</option>
+                                                    <option value="2">.093 Medium </option>
+                                                    <option value="3">recommended for 6-ft height</option>
+                                                    <option value="4">.125 Heavy and used for gates</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">4-foot fence</option>
+                                                    <option value="2"> 72" post</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gate Post</td>
+                                            <td>
+                                                <select name="post_size" id="post_size">
+                                                    <option value="">-----</option>
+                                                    <option value="1">2"-Standard</option>
+                                                    <option value="2">2.5" Beefier look</option>
+                                                    <option value="3">Industrial 3</option>
+                                                    <option value="4">Upgraded look</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 100%;" name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">Light .062 Standard</option>
+                                                    <option value="2">.093 Medium </option>
+                                                    <option value="3">recommended for 6-ft height</option>
+                                                    <option value="4">.125 Heavy and used for gates</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">4-foot fence</option>
+                                                    <option value="2"> 72" post</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Line Post</td>
+                                            <td>
+                                                <select name="post_size" id="post_size">
+                                                    <option value="">-----</option>
+                                                    <option value="1">2"-Standard</option>
+                                                    <option value="2">2.5" Beefier look</option>
+                                                    <option value="3">Industrial 3</option>
+                                                    <option value="4">Upgraded look</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 100%;" name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">Light .062 Standard</option>
+                                                    <option value="2">.093 Medium </option>
+                                                    <option value="3">recommended for 6-ft height</option>
+                                                    <option value="4">.125 Heavy and used for gates</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">4-foot fence</option>
+                                                    <option value="2"> 72" post</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>End Post</td>
+                                            <td>
+                                                <select name="post_size" id="post_size">
+                                                    <option value="">-----</option>
+                                                    <option value="1">2"-Standard</option>
+                                                    <option value="2">2.5" Beefier look</option>
+                                                    <option value="3">Industrial 3</option>
+                                                    <option value="4">Upgraded look</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 100%;" name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">Light .062 Standard</option>
+                                                    <option value="2">.093 Medium </option>
+                                                    <option value="3">recommended for 6-ft height</option>
+                                                    <option value="4">.125 Heavy and used for gates</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="corner" id="corner">
+                                                    <option value="">-----</option>
+                                                    <option value="1">4-foot fence</option>
+                                                    <option value="2"> 72" post</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                        <div class="postImage">
+                            <img src="assets/postimage.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -745,7 +783,7 @@
         </section>
         <footer class="text-center pt-4">
             <div class="bottom_text">
-                <p>Develop By<b>Global Dynamic Solutions</b></p>
+                <p>Develop By<b> Global Dynamic Solutions</b></p>
             </div>
         </footer>
     </body>

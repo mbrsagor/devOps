@@ -365,3 +365,6 @@ footer {
 .table-bordered td, .table-bordered th {
     font-weight: 500 !important;
 }
+.postImage img {
+    width: 100%;
+}
