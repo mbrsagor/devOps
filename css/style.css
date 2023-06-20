@@ -171,6 +171,9 @@ footer {
     background: aliceblue;
     padding: 5px;
 }
+footer a {
+    color: #000000;
+}
 .footer_content {
     padding-top: 30px;
     margin-bottom: 15px;
@@ -367,4 +370,7 @@ footer {
 }
 .postImage img {
     width: 100%;
+}
+.recommended_guideline p {
+    font-weight: 500;
 }

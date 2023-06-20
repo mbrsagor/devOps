@@ -348,7 +348,7 @@
                     <div class="fence_table">
                         <div class="fence_sec_table">
                             <div class="grade">
-                                <span>Standard Colors</span>
+                                <span>Colors</span>
                                 <select class="color_select mt-2" name="color" id="color">
                                     <option value="1">Black</option>
                                     <option value="2">White</option>
@@ -448,6 +448,18 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="recommended_guideline">
+                                <p>Important pool safety guidelines (please refer to your local pool code regulations)</p>
+                                <ul class="ml-4">
+                                    <li>Pool barrier should be at least 48” above grade.</li>
+                                    <li>The distance between the top of the horizontal members must be 45” or greater to pass ladder law regulations.</li>
+                                    <li>The spacing between the vertical members should not exceed 4”.</li>
+                                    <li>The maximum clearance at the bottom of the barrier should not exceed 2” above the grade.
+                                        Gates should open out from the pool.</li>
+                                    <li>Gates should be self-closing and self-latching.</li>
+                                    <li>The release mechanism of the gate should be at least 54” from the bottom of the gate.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div style="display: grid; grid-template-columns: 2fr 1fr; grid-gap: 10px;">
@@ -582,8 +594,9 @@
                                     </tbody>
                                 </table>
                         </div>
-                        <div class="postImage">
+                        <div class="postImage text-center">
                             <img src="assets/postimage.png" alt="">
+                            <p>Reference (Post type)</p>
                         </div>
                     </div>
                 </div>
@@ -596,43 +609,87 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
+                                    <th>#</th>
+                                    <th>Thumbnail</th>
                                     <th>Fence Sections</th>
                                     <th>Qty</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="width: 80%;"><input id="wide_72" type="checkbox"> <label
+                                    <td>
+                                        <input class="mt-3" type="checkbox">
+                                    </td>
+                                    <th>
+                                        <img style="width: 50px;" src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg" alt="">
+                                    </th>
+                                    <td style="width: 80%;"><label
                                             for="wide_72">Standard 72” wide</label></td>
                                     <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 80%;"><input id="wide_96" type="checkbox"> <label
+                                    <td>
+                                        <input class="mt-3" type="checkbox">
+                                    </td>
+                                    <th>
+                                        <img style="width: 50px;" src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg" alt="">
+                                    </th>
+                                    <td style="width: 80%;"><label
                                             for="wide_96">Standard 96” wide</label></td>
                                     <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 80%;"><input id="wide_dbl" type="checkbox"> <label
+                                    <td>
+                                        <input class="mt-3" type="checkbox">
+                                    </td>
+                                    <th>
+                                        <img style="width: 50px;" src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg" alt="">
+                                    </th>
+                                    <td style="width: 80%;"><label
                                             for="wide_dbl">Rackable / Dbl. Punch</label></td>
                                     <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 80%;"><input id="rail" type="checkbox"> <label for="rail">Modified
+                                    <td>
+                                        <input class="mt-3" type="checkbox">
+                                    </td>
+                                    <th>
+                                        <img style="width: 50px;" src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg" alt="">
+                                    </th>
+                                    <td style="width: 80%;"><label for="rail">Modified
                                             Rail</label></td>
                                     <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 80%;"><input id="extra_rail" type="checkbox"> <label
+                                    <td>
+                                        <input class="mt-3" type="checkbox">
+                                    </td>
+                                    <th>
+                                        <img style="width: 50px;" src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-network-placeholder-png-image_3416659.jpg" alt="">
+                                    </th>
+                                    <td style="width: 80%;"><label
                                             for="extra_rail">Extra Rail</label></td>
                                     <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 80%;"><input id="picket" type="checkbox"> <label
+                                    <td>
+                                        <input class="mt-3" type="checkbox">
+                                    </td>
+                                    <th>
+                                        <img style="width: 50px;" src="assets/DoublePicket.png" alt="">
+                                    </th>
+                                    <td style="width: 80%;"><label
                                             for="picket">Double Picket</label></td>
                                     <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 80%;"><input id="puppy_picket" type="checkbox"> <label
+                                    <td>
+                                        <input class="mt-3" type="checkbox">
+                                    </td>
+                                    <th>
+                                        <img style="width: 50px;" src="assets/PuppyPicket.png" alt="">
+                                    </th>
+                                    <td style="width: 80%;"><label
                                             for="puppy_picket">Puppy Picket</label></td>
                                     <td style="width: 20%;"><input class="custom_input_field" type="number"></td>
                                 </tr>
@@ -792,7 +849,7 @@
         </section>
         <footer class="text-center pt-4">
             <div class="bottom_text">
-                <p>Develop By<b> Global Dynamic Solutions</b></p>
+                <p>Developed By<b> <a href="https://globaldynamicsolutions.us">Global Dynamic Solutions</a></b></p>
             </div>
         </footer>
     </body>
