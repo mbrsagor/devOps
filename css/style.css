@@ -374,3 +374,19 @@ footer a {
 .recommended_guideline p {
     font-weight: 500;
 }
+
+.fency_hover_img_one {
+    position: absolute;
+    width: 300%;
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: .6s;
+}
+.img_fency_style_one {
+    position: relative;
+}
+.img_fency_style_one:hover .fency_hover_img_one {
+    visibility: visible;
+    opacity: 1;
+}
