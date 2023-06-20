@@ -131,7 +131,7 @@ body {
     max-width: 950px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 15px;
 }
 .section_subtitle {
