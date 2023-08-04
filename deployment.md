@@ -142,3 +142,5 @@ sudo tail -f /var/log/nginx/error.log
 sudo systemctl status nginx
 sudo fuser -k 8000/tcpsudo lsof -t -i tcp:8000 | xargs kill -9. 
 ```
+
+> Ref: https://www.codewithmuh.com/blog/deploy-django-application-on-ec2-with-postgresql-s3-domain-and-ssl-setup
