@@ -1,9 +1,3 @@
-> Nginx docker
-
-```bash
-docker run --name mynginx1 -p 80:80 -d nginx
-```
-
 > RUn the nginx server in your own ports
 ```bash
 docker run -d -p 8080:80 nginx:latest
@@ -43,3 +37,7 @@ docker rm $(docker ps -aq)
 docker rm -f container_ID
 ```
 
+> Add custom/own name the container
+```bash
+docker run --name mbrsagor -d -p 7080:80 -p 3000:80 nginx:latest
+```
