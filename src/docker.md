@@ -41,3 +41,13 @@ docker rm -f container_ID
 ```bash
 docker run --name mbrsagor -d -p 7080:80 -p 3000:80 nginx:latest
 ```
+
+> Access the docker container.
+```bash
+docker exec -it sagor bash
+```
+
+> Nginx configurations
+```bash
+docker run --name sagor -v $(pwd):/usr/sahre/nginx/index.html -d -p 3000:80 nginx
+```
