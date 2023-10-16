@@ -52,4 +52,13 @@ docker exec -it sagor bash
 docker run -it --rm -d -p 3000:80 --name sagor -v ~/Desktop/site-content:/usr/share/nginx/html nginx
 ```
 [source](https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/)
-git a
+
+> Copy another container and run new container
+```bash
+docker run --name mbrsagor --volumes-from container_name_hobe -d -p 3001:80  nginx
+```
+
+> Run container from old container
+```bash
+docker run --name new_container_name -p 3001:80 -d old_container_name:latest 
+```
