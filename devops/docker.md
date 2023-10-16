@@ -51,4 +51,5 @@ docker exec -it sagor bash
 ```bash
 docker run -it --rm -d -p 3000:80 --name sagor -v ~/Desktop/site-content:/usr/share/nginx/html nginx
 ```
-(https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/)[source]
+[source](https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/)
+git a
