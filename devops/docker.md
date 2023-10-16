@@ -37,6 +37,11 @@ docker rm $(docker ps -aq)
 docker rm -f container_ID
 ```
 
+> Remove docker image
+```bash
+docker rmi image_name
+```
+
 > Add custom/own name the container
 ```bash
 docker run --name mbrsagor -d -p 7080:80 -p 3000:80 nginx:latest
