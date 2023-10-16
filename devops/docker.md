@@ -49,5 +49,6 @@ docker exec -it sagor bash
 
 > Nginx configurations
 ```bash
-docker run --name sagor -v $(pwd):/usr/sahre/nginx/index.html -d -p 3000:80 nginx
+docker run -it --rm -d -p 3000:80 --name sagor -v ~/Desktop/site-content:/usr/share/nginx/html nginx
 ```
+(source)[https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/]
