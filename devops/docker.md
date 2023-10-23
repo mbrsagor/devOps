@@ -67,3 +67,8 @@ docker run --name mbrsagor --volumes-from container_name_hobe -d -p 3001:80  ngi
 ```bash
 docker run --name new_container_name -p 3001:80 -d old_container_name:latest 
 ```
+
+> Docker volume delete or remove
+```bash
+docker volume rm $(docker volume ls -q)
+```
