@@ -72,3 +72,26 @@ docker run --name new_container_name -p 3001:80 -d old_container_name:latest
 ```bash
 docker volume rm $(docker volume ls -q)
 ```
+
+> Show and create network
+```bash
+docker network ls
+docker network create mongo-network
+```
+
+> Run mongodb with created network.
+```bash
+docker run -d --name mongoDB -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --net mongo-network mongo 
+```
+
+> Run mongo db server using config.
+```bash
+docker run -d \
+-p 8081:8081 \
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin \
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=password \
+--net mongo-network \
+--name mymongodb \
+-e ME_CONFIG_MONGODB_SERVER=mongoDB \
+mongo-express 
+```
