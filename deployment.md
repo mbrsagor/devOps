@@ -1,5 +1,5 @@
 # Deployment Django App AWS
-> How to deployment Django applicaiton AWS.
+> How to deploy Django application AWS.
 
 ### Services:
 - EC2
@@ -141,6 +141,11 @@ sudo tail -f /var/log/nginx/error.log
 ```bash
 sudo systemctl status nginx
 sudo fuser -k 8000/tcpsudo lsof -t -i tcp:8000 | xargs kill -9. 
+```
+
+> If Pycharm IDE django port already open kill the port for Ubuntu & MacOS
+```bash
+sudo lsof -t -i tcp:8000 | xargs kill -9
 ```
 
 > Ref: https://www.codewithmuh.com/blog/deploy-django-application-on-ec2-with-postgresql-s3-domain-and-ssl-setup
