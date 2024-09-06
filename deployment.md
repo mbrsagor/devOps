@@ -149,3 +149,4 @@ sudo lsof -t -i tcp:8000 | xargs kill -9
 ```
 
 > Ref: https://www.codewithmuh.com/blog/deploy-django-application-on-ec2-with-postgresql-s3-domain-and-ssl-setup
+> CI/CD: https://www.youtube.com/watch?v=NTqZ3S7xnjI
