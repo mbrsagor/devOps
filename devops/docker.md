@@ -51,6 +51,10 @@ docker run --name mbrsagor -d -p 7080:80 -p 3000:80 nginx:latest
 ```bash
 docker exec -it sagor bash
 ```
+> How to config own index.html file
+```bash
+docker run --name webapp -d -p 8080:80 -v $(pwd):/usr/share/nginx/html:ro nginx:latest
+```
 
 > Nginx configurations
 ```bash
