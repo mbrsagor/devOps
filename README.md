@@ -1,4 +1,4 @@
-# AWS
+# DevOPS & MlOPS
 > AWS Solutions Associate Architect Associate.
 
 ######  Table of contents
@@ -23,7 +23,7 @@
 - Click on your database instance
 - Navigate to the Maintenance & backups tab
 - Scroll down to Snapshots.
-- Click "Take snapshot"
+- Click "Take snapshot."
 - Give it a name (e.g., dbname-backup)
 - Click "Create snapshot".
 - Wait for the snapshot to appear in the Snapshots list (it may take a few minutes).
