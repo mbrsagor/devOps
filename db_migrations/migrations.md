@@ -4,6 +4,12 @@
 
 ### Let's see:
 
+##### Open database 
+```bash
+psql -U postgres
+```
+Or 
+
 ```bash
 psql -U postgres -d mydb -f /Users/dev/mydb.dump
 ```
