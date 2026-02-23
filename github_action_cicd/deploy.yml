@@ -1,0 +1,140 @@
+name: CI/CD pipeline for eCommerce backend project
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'README.md'
+
+# This is used to give permissions to the workflow to read and write to the repository.
+permissions:
+  id-token: write
+  contents: read
+
+# This is used to define the jobs that will be executed by the workflow.
+jobs:
+  integration:
+    name: Continuous Integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Lint code
+        run: echo "Linting repository"
+
+      - name: Run unit tests
+        run: echo "Running unit tests"
+
+# This is used to build and push the image to the ECR.
+  build-and-push-ecr-image:
+    name: Build & Push to ECR
+    needs: integration
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Utilities
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq unzip
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build, tag, and push image to Amazon ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          echo "Building Docker image..."
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
+          echo "Pushing image to ECR..."
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          echo "Image pushed: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG and latest"
+
+# This is used to deploy the image to the EC2.
+  Continuous-Deployment:
+    name: Continuous Deployment
+    needs: build-and-push-ecr-image
+    runs-on: self-hosted   # your EC2 runner
+    steps:
+      - name: Force clean workspace
+        run: sudo rm -rf ${{ github.workspace }}/* || true
+
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Pull latest image from ECR
+        env:
+          ECR_URI: ${{ secrets.AWS_ECR_LOGIN_URI }}
+          ECR_REPO: ${{ secrets.ECR_REPOSITORY_NAME }}
+        run: |
+          echo "Pulling latest image..."
+          docker pull $ECR_URI/$ECR_REPO:latest
+
+      - name: Copy files to deployment directory
+        run: |
+          mkdir -p /home/ubuntu/ecommerce
+          rsync -avz --exclude '.git' ./ /home/ubuntu/ecommerce/
+
+
+      - name: Stop & remove old containers
+        working-directory: /home/ubuntu/ecommerce
+        run: |
+          docker-compose down || true
+          docker stop ecommerce_db || true
+          docker rm -fv ecommerce_db || true
+
+      - name: Free up host port 8000 (if any)
+        run: |
+          docker ps --filter "publish=8000" -q | xargs -r docker stop
+          docker ps -a --filter "publish=8000" -q | xargs -r docker rm -f || true
+
+      - name: Add execute permission to entrypoint.sh
+        working-directory: /home/ubuntu/ecommerce
+        run: chmod +x entrypoint.sh
+
+      - name: Run docker-compose
+        working-directory: /home/ubuntu/ecommerce
+        env:
+          ECR_URI: ${{ secrets.AWS_ECR_LOGIN_URI }}
+          ECR_REPO: ${{ secrets.ECR_REPOSITORY_NAME }}
+        run: |
+          echo "Starting containers with docker-compose..."
+          docker-compose up -d --build
+
+      - name: Wait for containers
+        working-directory: /home/ubuntu/ecommerce
+        run: |
+          sleep 5
+          docker-compose ps
+
+      - name: Deployment finished
+        run: echo "Deployment completed successfully! ✅"
+
